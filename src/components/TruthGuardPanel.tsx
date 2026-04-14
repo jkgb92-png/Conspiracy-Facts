@@ -59,7 +59,7 @@ export default function TruthGuardPanel({ result, isLoading = false }: TruthGuar
     return (
       <div className="bg-white border border-slate-200 rounded-xl p-8 text-center space-y-4">
         <div className="w-16 h-16 border-4 border-teal-500 border-t-transparent rounded-full animate-spin mx-auto" />
-        <p className="font-semibold text-blue-900">Truth Guard is analysing…</p>
+        <p className="font-semibold text-blue-900">Truth Guard is analyzing…</p>
         <p className="text-sm text-slate-500">
           Cross-referencing claims with verified databases. This may take a few seconds.
         </p>
@@ -97,8 +97,8 @@ export default function TruthGuardPanel({ result, isLoading = false }: TruthGuar
           </div>
         </div>
         <div className="text-right">
-          <div className={`text-3xl font-black ${scoreColor.replace("text-", "text-")} text-white`}>
-            <span className={scoreColor.replace("600", "300").replace("text-", "text-")}>{result.overallScore}</span>
+          <div className={`text-3xl font-black ${scoreColor} text-white`}>
+            <span className={scoreColor.replace("600", "300")}>{result.overallScore}</span>
             <span className="text-blue-300 text-lg font-normal">/100</span>
           </div>
           <span
