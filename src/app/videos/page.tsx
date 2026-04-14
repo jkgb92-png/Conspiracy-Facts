@@ -1,5 +1,6 @@
-import { mockVideos } from "@/lib/mockData";
+import { mockVideos, mockDeepfakeResult } from "@/lib/mockData";
 import VideoCard from "@/components/VideoCard";
+import DeepfakeGuardian from "@/components/DeepfakeGuardian";
 
 export default function VideosPage() {
   return (
@@ -53,6 +54,33 @@ export default function VideosPage() {
             <p className="text-xs text-slate-500 leading-relaxed">{step.desc}</p>
           </div>
         ))}
+      </div>
+
+      {/* Deepfake Guardian section */}
+      <div className="mb-10">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
+            <span className="text-sm">🔬</span>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-blue-900">Deepfake Guardian</h2>
+            <p className="text-sm text-slate-500">
+              AI frame-level analysis for any video in the library — powered by FaceForensics++ model.
+            </p>
+          </div>
+        </div>
+        <div className="grid lg:grid-cols-3 gap-6">
+          {mockVideos.map((video) => (
+            <div key={video.id} className="space-y-2">
+              <p className="text-xs font-semibold text-slate-600 truncate">{video.title}</p>
+              <DeepfakeGuardian
+                videoTitle={video.title}
+                durationSeconds={video.duration}
+                initialResult={video.id === "video-1" ? mockDeepfakeResult : undefined}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Video grid */}

@@ -1,8 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;
+
+  /* War Room palette */
+  --wr-bg: #0a0a0f;
+  --wr-surface: #0f1117;
+  --wr-surface-2: #161b27;
+  --wr-border: #1e2736;
+  --wr-teal: #00e5c0;
+  --wr-teal-dim: #00b09b;
+  --wr-amber: #f59e0b;
+  --wr-amber-dim: #b45309;
+  --wr-red: #ef4444;
+  --wr-green: #22c55e;
+  --wr-text: #e2e8f0;
+  --wr-text-dim: #64748b;
+  --wr-text-muted: #334155;
+  --wr-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
 }
 
 body {
@@ -10,3 +27,61 @@ body {
   color: var(--foreground);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
+
+/* ── War Room surface styles ─────────────────────────────────────────── */
+.wr-bg        { background: var(--wr-bg); color: var(--wr-text); }
+.wr-surface   { background: var(--wr-surface); }
+.wr-surface-2 { background: var(--wr-surface-2); }
+.wr-border    { border-color: var(--wr-border); }
+.wr-mono      { font-family: var(--wr-mono); }
+.wr-teal      { color: var(--wr-teal); }
+.wr-amber     { color: var(--wr-amber); }
+
+/* Scanline overlay */
+.wr-scanlines {
+  position: relative;
+}
+.wr-scanlines::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 229, 192, 0.015) 2px,
+    rgba(0, 229, 192, 0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Pulse animation for graph nodes */
+@keyframes wr-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+.wr-pulse { animation: wr-pulse 2s ease-in-out infinite; }
+
+/* Typewriter cursor */
+@keyframes wr-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.wr-cursor::after {
+  content: "▋";
+  color: var(--wr-teal);
+  animation: wr-blink 1s step-start infinite;
+  margin-left: 2px;
+}
+
+/* Progress ticker glow */
+.wr-glow {
+  box-shadow: 0 0 12px rgba(0, 229, 192, 0.4),
+              0 0 4px  rgba(0, 229, 192, 0.6);
+}
+.wr-glow-amber {
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4),
+              0 0 4px  rgba(245, 158, 11, 0.6);
+}
+

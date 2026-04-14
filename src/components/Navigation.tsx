@@ -8,6 +8,8 @@ const navLinks = [
   { href: "/feed", label: "Story Feed" },
   { href: "/videos", label: "Videos" },
   { href: "/truth-guard", label: "Truth Guard" },
+  { href: "/ledger", label: "The Ledger" },
+  { href: "/network", label: "Network" },
   { href: "/profile", label: "Profile" },
 ];
 
