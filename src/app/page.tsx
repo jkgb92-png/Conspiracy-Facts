@@ -48,16 +48,39 @@ const features = [
     color: "bg-emerald-50 border-emerald-200",
     iconBg: "bg-emerald-100",
   },
+  {
+    icon: "📂",
+    title: "The Ledger of Truth",
+    description:
+      "Upload documents, datasets, and videos to IPFS for immutable, censorship-resistant storage. Every truth is scored by our RAG forensic engine against 4.2M indexed records.",
+    href: "/ledger",
+    color: "bg-slate-900 border-slate-700",
+    iconBg: "bg-slate-800",
+    dark: true,
+  },
+  {
+    icon: "🕸",
+    title: "Network of Influence",
+    description:
+      "Interactive D3.js force graph revealing connections between people, organizations, documents, and events — backed by Neo4j graph database with Cypher query API.",
+    href: "/network",
+    color: "bg-amber-50 border-amber-200",
+    iconBg: "bg-amber-100",
+  },
 ];
 
 const techStack = [
-  { name: "Next.js 15", role: "Frontend & SSR", icon: "▲" },
+  { name: "Next.js 16", role: "Frontend & SSR", icon: "▲" },
   { name: "TypeScript", role: "Type Safety", icon: "TS" },
   { name: "Tailwind CSS", role: "UI Styling", icon: "🎨" },
   { name: "AWS S3", role: "Video Storage", icon: "☁" },
   { name: "AWS CloudFront", role: "CDN Delivery", icon: "⚡" },
   { name: "LLM API (OpenAI)", role: "Truth Guard AI", icon: "🤖" },
-  { name: "PostgreSQL", role: "Primary Database", icon: "🗄" },
+  { name: "IPFS / Filecoin", role: "Immutable Storage", icon: "⛓" },
+  { name: "D3.js + Neo4j", role: "Influence Graph", icon: "🕸" },
+  { name: "PostgreSQL + pgvector", role: "RAG Vector Store", icon: "🗄" },
+  { name: "FaceForensics++", role: "Deepfake Detection", icon: "🔬" },
+  { name: "Polygon / Ethereum", role: "Smart Contract Registry", icon: "📜" },
   { name: "Redis", role: "Caching Layer", icon: "🔴" },
 ];
 
@@ -127,7 +150,7 @@ export default function Home() {
             storytelling platform on the web.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((f) => (
             <Link
               key={f.title}
@@ -137,10 +160,10 @@ export default function Home() {
               <div className={`w-12 h-12 ${f.iconBg} rounded-xl flex items-center justify-center text-2xl`}>
                 {f.icon}
               </div>
-              <h3 className="font-bold text-blue-900 group-hover:text-teal-700 transition-colors">
+              <h3 className={`font-bold group-hover:opacity-80 transition-opacity ${f.dark ? "text-white" : "text-blue-900 group-hover:text-teal-700"}`}>
                 {f.title}
               </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">{f.description}</p>
+              <p className={`text-sm leading-relaxed ${f.dark ? "text-slate-400" : "text-slate-600"}`}>{f.description}</p>
             </Link>
           ))}
         </div>
@@ -266,7 +289,7 @@ export default function Home() {
             to serve truth at global scale.
           </p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {techStack.map((tech) => (
             <div
               key={tech.name}

@@ -39,6 +39,8 @@ export default function RootLayout({
                   <li><a href="/feed" className="hover:text-blue-900 transition-colors">Story Feed</a></li>
                   <li><a href="/videos" className="hover:text-blue-900 transition-colors">Video Library</a></li>
                   <li><a href="/truth-guard" className="hover:text-blue-900 transition-colors">Truth Guard AI</a></li>
+                  <li><a href="/ledger" className="hover:text-blue-900 transition-colors">The Ledger of Truth</a></li>
+                  <li><a href="/network" className="hover:text-blue-900 transition-colors">Network of Influence</a></li>
                   <li><a href="/profile" className="hover:text-blue-900 transition-colors">My Profile</a></li>
                 </ul>
               </div>
