@@ -14,7 +14,8 @@ export async function POST(request: Request) {
   await new Promise((r) => setTimeout(r, 1800));
 
   const fps = 24;
-  const totalFrames = Math.min(durationSeconds * fps, 1440); // cap at 60 s for simulation
+  const MAX_SIMULATION_DURATION_SECONDS = 60;
+  const totalFrames = Math.min(durationSeconds * fps, MAX_SIMULATION_DURATION_SECONDS * fps);
   const sampleInterval = Math.max(1, Math.floor(totalFrames / 20));
 
   // Deterministic probability from video title

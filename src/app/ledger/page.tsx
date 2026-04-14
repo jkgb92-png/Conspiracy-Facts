@@ -391,7 +391,7 @@ export default function LedgerPage() {
                   </p>
                   <div className="text-[10px] wr-mono space-y-1" style={{ color: "var(--wr-text-dim)" }}>
                     <div>TX: 0x{selected.ipfs.cid.slice(2, 14).toLowerCase()}…</div>
-                    <div>Block: {18_000_000 + parseInt(selected.ipfs.cid.slice(-6), 36) % 1_000_000}</div>
+                     <div>Block: {18_000_000 + selected.ipfs.cid.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % 1_000_000}</div>
                     <div>Network: Polygon PoS</div>
                     <div style={{ color: "var(--wr-teal)" }}>Status: Confirmed ✓</div>
                   </div>

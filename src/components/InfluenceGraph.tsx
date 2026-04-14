@@ -19,6 +19,8 @@ const NODE_COLORS: Record<GraphNodeType, string> = {
   location: "#34d399",
 };
 
+const MAX_LABEL_LENGTH = 18;
+
 const NODE_SIZES: Record<GraphNodeType, number> = {
   person: 10,
   organization: 14,
@@ -215,7 +217,7 @@ export default function InfluenceGraph({
       .attr("fill", "#94a3b8")
       .attr("font-size", 9)
       .attr("font-family", "JetBrains Mono, monospace")
-      .text((d) => (d.label.length > 18 ? d.label.slice(0, 17) + "…" : d.label));
+      .text((d) => (d.label.length > MAX_LABEL_LENGTH ? d.label.slice(0, MAX_LABEL_LENGTH - 1) + "…" : d.label));
 
     simulation.on("tick", () => {
       linkSel
