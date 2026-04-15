@@ -41,7 +41,8 @@ export const mockStories: Story[] = [
     title: "The Hidden Cost of Fast Fashion: A Three-Year Investigation",
     excerpt:
       "After years of investigative reporting across twelve countries, the data reveals a systemic pattern of labor violations and environmental damage that leading brands have actively concealed.",
-    content: "Full story content would go here...",
+    content:
+      "The global fast fashion industry generates approximately 92 million tonnes of textile waste each year — the equivalent of one garbage truck of clothes incinerated or landfilled every second, according to the Ellen MacArthur Foundation. The United Nations Environment Programme (UNEP) estimates the fashion sector is responsible for 8–10% of global carbon emissions, more than the combined output of all international aviation and maritime shipping.\n\nA three-year investigation spanning twelve garment-producing countries documented systemic supply chain violations at factories linked to major apparel brands. Workers in Bangladesh's garment sector — the world's second-largest apparel exporter — earned minimum wages of approximately $113 per month as of 2023. The International Labour Organization has repeatedly cited inadequate enforcement of existing labor protections. Brands including H&M, Zara, and Shein have faced documented criticism from the Clean Clothes Campaign for supply chain opacity and resistance to binding wage agreements.\n\nThe industry is also the second-largest consumer of water globally, using an estimated 79 trillion litres annually (World Bank). A single pair of jeans requires roughly 10,000 litres of water to produce, from cotton cultivation through dyeing and finishing. The Aral Sea — once the world's fourth-largest lake — has largely disappeared due in part to cotton irrigation diversion, a loss documented by NASA satellite imagery across six decades.",
     author: mockAuthors[0],
     publishedAt: "2026-04-12T09:30:00Z",
     tags: ["environment", "labor-rights", "investigative"],
@@ -57,7 +58,8 @@ export const mockStories: Story[] = [
     title: "How Misinformation Spreads: Mapping the Digital Ecosystem",
     excerpt:
       "A data-driven analysis of 50,000 social media posts reveals the precise mechanisms by which false narratives achieve viral spread — and what actually stops them.",
-    content: "Full story content would go here...",
+    content:
+      "A landmark peer-reviewed study published in Science (March 9, 2018) by Vosoughi, Roy, and Aral at MIT analyzed 126,000 verified news stories tweeted by approximately 3 million people over an 11-year period (2006–2017). The study found that false news spreads significantly farther, faster, deeper, and more broadly than true news across all categories of information examined.\n\nFalse stories were 70% more likely to be retweeted than accurate ones, and reached an audience of 1,500 people approximately six times faster. The researchers found this effect was driven primarily by human behavior rather than automated bots — users were more likely to share novel or emotionally provocative content regardless of its accuracy. False political news showed the most pronounced differences in virality compared to true political content. Novelty was identified as the primary driver: false claims were perceived as more novel and inspired greater replies expressing surprise and disgust.\n\nSeparate research from the Reuters Institute Digital News Report (2023) found that algorithmic amplification on social platforms systematically exacerbates these dynamics. Platforms including Meta, X (formerly Twitter), and YouTube have each introduced content-labeling interventions since 2020. However, independent audits by the Mozilla Foundation and the Center for Countering Digital Hate have documented inconsistent enforcement and significant variance in how labels are applied across political topics.",
     author: mockAuthors[1],
     publishedAt: "2026-04-11T14:15:00Z",
     tags: ["media", "technology", "research"],
@@ -73,7 +75,8 @@ export const mockStories: Story[] = [
     title: "Local Officials Diverted Relief Funds, Documents Show",
     excerpt:
       "Internal audit documents obtained under the Freedom of Information Act reveal that over $2.4 million in disaster relief funds were redirected over a five-year period.",
-    content: "Full story content would go here...",
+    content:
+      "Internal audit documents obtained under the Freedom of Information Act have identified financial irregularities in the distribution of Community Development Block Grant – Disaster Recovery (CDBG-DR) funds across several municipal jurisdictions. The documents indicate portions of federally designated disaster relief allocations were directed toward expenditures not qualifying under program guidelines.\n\nThe CDBG-DR program, administered by the U.S. Department of Housing and Urban Development, has been the subject of sustained Inspector General scrutiny. A HUD OIG report published in 2020 identified $1.9 billion in questioned costs across multiple state-administered programs covering the period 2012–2019. The Government Accountability Office has issued repeated findings citing systemic weaknesses in HUD's grantee oversight mechanisms, including inadequate documentation standards and insufficient field audits.\n\nIndependent verification of the specific documents and their attribution to named local officials is ongoing. The story's pending status reflects that while program-level findings are corroborated by published government records, specific allegations concerning named parties require primary source confirmation and the opportunity for named officials to respond. Readers are advised to treat specific attribution claims as unconfirmed pending this process.",
     author: mockAuthors[2],
     publishedAt: "2026-04-10T11:00:00Z",
     tags: ["government", "accountability", "local-news"],
@@ -89,7 +92,8 @@ export const mockStories: Story[] = [
     title: "New Study Links Air Quality to Childhood Cognition — But the Data Is Mixed",
     excerpt:
       "A peer-reviewed study in the New England Journal of Medicine presents compelling correlations, but several independent researchers flag methodological concerns that may limit its conclusions.",
-    content: "Full story content would go here...",
+    content:
+      "A peer-reviewed study published in The Lancet Planetary Health (2020) estimated that approximately 7 million people die each year from air pollution — surpassing deaths attributable to HIV/AIDS, tuberculosis, and malaria combined. A growing body of research now links long-term exposure to fine particulate matter (PM2.5) and nitrogen dioxide (NO₂) to measurable impairments in cognitive function, particularly in children and older adults.\n\nA Harvard T.H. Chan School of Public Health study published in JAMA Internal Medicine (2020) analyzed medical data from 13.1 million Medicare recipients and found that long-term exposure to PM2.5 concentrations below the existing EPA standard was still significantly associated with increased risk of Alzheimer's disease and related dementias. A separate meta-analysis in PLOS Medicine (2021) reviewing 18 longitudinal cohort studies found broadly consistent associations between urban air pollution and accelerated cognitive decline across age groups.\n\nSeveral independent researchers have noted important methodological limitations in drawing causal conclusions from these datasets. Confounding factors — including socioeconomic status, educational attainment, residential segregation, and comorbid health conditions — are difficult to fully control for in large observational studies. The study cited in this article presents correlational data with appropriate caveats, and the peer review process identified concerns about geographic generalizability that subsequent publications have only partially addressed.",
     author: mockAuthors[3],
     publishedAt: "2026-04-09T16:45:00Z",
     tags: ["health", "science", "environment"],
@@ -105,54 +109,57 @@ export const mockStories: Story[] = [
 export const mockVideos: Video[] = [
   {
     id: "video-1",
-    title: "Inside the Whistleblower Network: Full Documentary",
+    title: "United States of Secrets, Part One (full documentary) | FRONTLINE",
     description:
-      "A documentary examining the global network of whistleblowers who risk everything to expose institutional corruption — featuring exclusive interviews and verified documentation.",
+      "PBS FRONTLINE's award-winning two-part investigation into the NSA's secret surveillance program — how it was built, how it works, and what it means for American democracy. Features extensive interviews with whistleblowers, former intelligence officials, journalists, and legal experts. Originally broadcast May 13, 2014.",
     author: mockAuthors[0],
-    publishedAt: "2026-04-13T08:00:00Z",
-    duration: 4320,
+    publishedAt: "2021-09-09T08:00:00Z",
+    duration: 6798,
     thumbnailUrl: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800",
-    videoUrl: "#",
-    views: 82340,
-    likes: 9120,
+    videoUrl: "https://www.youtube.com/watch?v=kaUemcqIQ-k",
+    views: 10412780,
+    likes: 89400,
     verificationStatus: "verified",
-    truthScore: 94,
-    tags: ["documentary", "whistleblowers", "accountability"],
-    transcript: "Transcript content for truth-guard analysis...",
+    truthScore: 97,
+    tags: ["surveillance", "NSA", "whistleblowers", "accountability"],
+    transcript:
+      "The National Security Agency's bulk telephone metadata collection program, authorized under Section 215 of the USA PATRIOT Act, collected call records of hundreds of millions of Americans with no requirement of individual suspicion. A classified FISA Court order first revealed by The Guardian in June 2013 confirmed the program's scope. The Privacy and Civil Liberties Oversight Board concluded in its 2014 report that the Section 215 program has provided only minimal unique value in terrorist investigations and that the bulk collection of phone records should end. In 2015, the Second Circuit Court of Appeals ruled the program exceeded the scope of what Congress authorized under Section 215.",
   },
   {
     id: "video-2",
-    title: "Live Town Hall: Water Contamination Crisis Q&A",
+    title: "Flint's Deadly Water (full documentary) | FRONTLINE",
     description:
-      "Community members and environmental scientists discuss the verified findings of the recent groundwater study, with direct responses to common questions and concerns.",
+      "PBS FRONTLINE's investigation into Flint, Michigan's water contamination crisis — tracing how a cost-cutting decision led to lead-poisoned water and a deadly outbreak of Legionnaires' disease, and why officials failed to act. Originally broadcast November 26, 2019.",
     author: mockAuthors[1],
-    publishedAt: "2026-04-11T19:00:00Z",
-    duration: 2760,
+    publishedAt: "2021-11-09T19:00:00Z",
+    duration: 3240,
     thumbnailUrl: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800",
-    videoUrl: "#",
-    views: 34510,
-    likes: 4230,
+    videoUrl: "https://www.youtube.com/watch?v=6oVEBCtJgeA",
+    views: 2180000,
+    likes: 28700,
     verificationStatus: "verified",
-    truthScore: 89,
-    tags: ["environment", "community", "health"],
-    transcript: "Transcript content for truth-guard analysis...",
+    truthScore: 96,
+    tags: ["environment", "public-health", "accountability", "Flint"],
+    transcript:
+      "In April 2014, Flint, Michigan switched its water source from Detroit's system to the Flint River as a cost-saving measure. State officials failed to apply corrosion control treatments required under the EPA's Lead and Copper Rule, causing lead to leach from aging pipes into tap water. The Virginia Tech research team led by Dr. Marc Edwards confirmed elevated lead levels in September 2015. The Michigan Department of Environmental Quality initially dismissed the findings. A simultaneous outbreak of Legionnaires' disease — linked by investigators to the water source switch — killed at least 12 people and sickened 90. Governor Rick Snyder declared a state of emergency in January 2016. Federal charges were filed against state and local officials between 2016 and 2021.",
   },
   {
     id: "video-3",
-    title: "Decoded: The Paper Trail Behind the Housing Crisis",
+    title: "A Decent Home | Full Documentary | Affordable Housing | America ReFramed",
     description:
-      "Financial analyst breaks down 15 years of publicly available records to show exactly how speculative investment patterns drove up housing costs in 30 major cities.",
+      "An Emmy-nominated documentary following residents of mobile home parks across America as private equity firms acquire their communities and raise rents beyond what families can afford. Examines the forces reshaping affordable housing and the growing role of institutional investors in manufactured housing. From the America ReFramed series on PBS.",
     author: mockAuthors[2],
-    publishedAt: "2026-04-09T12:30:00Z",
-    duration: 1980,
+    publishedAt: "2022-03-15T12:30:00Z",
+    duration: 5144,
     thumbnailUrl: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800",
-    videoUrl: "#",
-    views: 56720,
-    likes: 7840,
-    verificationStatus: "pending",
-    truthScore: 71,
-    tags: ["economics", "housing", "analysis"],
-    transcript: "Transcript content for truth-guard analysis...",
+    videoUrl: "https://www.youtube.com/watch?v=T77cjVwZtyc",
+    views: 420000,
+    likes: 7100,
+    verificationStatus: "verified",
+    truthScore: 93,
+    tags: ["housing", "economics", "inequality", "documentary"],
+    transcript:
+      "The United States has approximately 43,000 manufactured housing communities housing an estimated 22 million people, making it the nation's largest source of unsubsidized affordable housing. Since 2015, private equity firms and real estate investment trusts have accelerated acquisition of these communities. Residents own their homes but rent the land, creating a structural vulnerability: lot rent increases can render homes unsellable in place and too expensive to move. The median lot rent in investor-owned parks rose 25–30% between 2018 and 2022 according to data compiled by Manufactured Housing Action. Residents in several documented communities faced eviction after being unable to meet rent increases exceeding 100% in under two years.",
   },
 ];
 
